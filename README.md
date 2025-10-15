@@ -1,5 +1,6 @@
 # Lab 5
 This is the lab 5 repo for Alex and Luke
+![Badge](https://github.com/uofu-adv-emb-25/Lab5_AlexLuke/actions/workflows/main.yml/badge.svg)
 
 ## Sleep
 | Type     | Min | Max | Mean | Std Dev |
