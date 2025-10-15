@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include <pico/stdlib.h>
 #include <pico/sync.h>
+#include "const.h"
+
+volatile int i;
 
 int toggle = 1;
 void irq_callback(uint gpio, uint32_t event_mask)
 {
+    for (i = 0; i < BUSY_COUNT; i++)
+        ;
     if (gpio != IN_PIN) return;
     toggle = !toggle;
     if (event_mask & GPIO_IRQ_EDGE_RISE) {
